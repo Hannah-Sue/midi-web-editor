@@ -30,9 +30,11 @@ npm run dev
 ### 2. 后端（Agent 功能需要）
 
 ```bash
-# 配置 DeepSeek Key（勿写入仓库）
+# 配置 DeepSeek Key
 # PowerShell:
 $env:DEEPSEEK_API_KEY="你的密钥"
+# 或是在backend/src/main/resources/application.properties中配置
+deepseek.api-key=你的密钥
 
 cd backend
 ./mvnw spring-boot:run
@@ -55,12 +57,8 @@ web-midi-editor/
 └── docs/              # 需求、架构与使用文档
 ```
 
-## 比赛 / 评审说明
+## 其他说明
 
 - **无需 Key 也可体验**：不启动后端时，编辑器核心功能（卷帘、播放、导入导出）仍可使用；助手需自备 DeepSeek API Key 与账户余额。
 - 演示 Agent 时请先启动后端并配置 `DEEPSEEK_API_KEY`。
-- 详细需求与实现对照见 [docs/midi编辑器需求文档.md](docs/midi编辑器需求文档.md)。
 
-## 许可证
-
-参赛提交请以比赛方要求为准。
